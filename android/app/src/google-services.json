@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "239438328972",
+    "project_id": "sushiapp-2d2f4",
+    "storage_bucket": "sushiapp-2d2f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239438328972:android:66a5a102ad315cf12a77a9",
+        "android_client_info": {
+          "package_name": "com.example.foodapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnhlg9See14Y_QgWPnzf2Amoat86wIN9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

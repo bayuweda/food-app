@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:food_app/componenet/button.dart';
 
 class IntroPage extends StatelessWidget {
-  const IntroPage({Key? key}) : super(key: key); // Perbaikan pada constructor
+  const IntroPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final User? user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        Navigator.pushReplacementNamed(context, '/login');
+      });
+      return Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      );
+    }
+
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 129, 74, 74),
       body: Padding(
@@ -15,7 +26,6 @@ class IntroPage extends StatelessWidget {
             SizedBox(
               height: 25,
             ),
-            // shop name
             Text(
               "SHUSI MAN",
               style: TextStyle(
@@ -23,11 +33,9 @@ class IntroPage extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-
             SizedBox(
               height: 25,
             ),
-            // icon
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Image.asset('lib/images/sushi.png'),
@@ -36,7 +44,7 @@ class IntroPage extends StatelessWidget {
               height: 25,
             ),
             Text(
-              "THE TESTE JAPANESE FOOD",
+              "THE TASTE JAPANESE FOOD",
               style: TextStyle(
                 fontSize: 44,
                 color: Colors.white,
@@ -55,11 +63,9 @@ class IntroPage extends StatelessWidget {
             SizedBox(
               height: 25,
             ),
-
             CustomButton(
               text: 'Mulai Pesan',
               onTap: () {
-                // go to menu page
                 Navigator.pushNamed(context, 'menupage');
               },
             ),

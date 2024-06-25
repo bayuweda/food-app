@@ -34,6 +34,14 @@ dependencies:
   google_fonts: # Menambahkan dependensi Google Fonts
   cupertino_icons: ^1.0.6
   http: 0.13.6
+  firebase_core: ^2.7.0 # Versi terbaru
+  firebase_auth: ^4.20.0 # Versi terbaru
+  cloud_firestore: 4.17.5 # Versi terbaru
+  firebase_database: ^10.4.1
+  google_maps_flutter: ^2.1.0 # atau versi terbaru
+  geolocator: ^9.0.2 # atau versi terbaru
+  url_launcher: ^6.3.0
+  camera: ^0.11.0+1
 
 dev_dependencies:
   flutter_test:

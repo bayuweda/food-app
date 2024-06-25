@@ -1,10 +1,12 @@
 import 'dart:convert';
-import 'package:flutter/material.dart';
+import 'package:food_app/pages/account_page.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter/material.dart';
 import 'package:food_app/componenet/button.dart';
 import 'package:food_app/componenet/tile_food.dart';
 import 'package:food_app/models/food.dart';
 import 'package:food_app/pages/food_details.dart';
+import 'package:food_app/pages/location.dart'; // Import halaman lokasi
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -57,6 +59,24 @@ class _MenuPageState extends State<MenuPage> {
     );
   }
 
+  void navigateToLocationPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => LocationPage(),
+      ),
+    );
+  }
+
+  void navigateToAccountPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => AccountPage(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,11 +84,13 @@ class _MenuPageState extends State<MenuPage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {
-            Scaffold.of(context).openDrawer();
-          },
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+          ),
         ),
         title: Text(
           'Tokyo',
@@ -77,6 +99,48 @@ class _MenuPageState extends State<MenuPage> {
           ),
         ),
         centerTitle: true,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 129, 74, 74),
+              ),
+              child: Text(
+                'Menu',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+              onTap: () {
+                Navigator.pop(context); // Kembali ke halaman menu
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.location_on),
+              title: Text('Lokasi Kami'),
+              onTap: () {
+                Navigator.pop(context); // Tutup drawer
+                navigateToLocationPage(); // Navigasi ke halaman lokasi
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.account_balance),
+              title: Text('Akun'),
+              onTap: () {
+                Navigator.pop(context); // Tutup drawer
+                navigateToAccountPage(); // Navigasi ke halaman lokasi
+              },
+            ),
+          ],
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25),

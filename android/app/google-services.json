@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "662339213862",
+    "firebase_url": "https://food-app-1c58d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "food-app-1c58d",
+    "storage_bucket": "food-app-1c58d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662339213862:android:0c36e175364ae3eb6da4e7",
+        "android_client_info": {
+          "package_name": "com.example.food_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi3awfiHo3Dn_vyji_yxI2ss1CQnpYYMk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

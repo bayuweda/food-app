@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/firebase_options.dart';
 import 'package:food_app/pages/rawat_inap.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:food_app/firebase_options.dart';
 import 'pages/intro_page.dart';
 import 'pages/menu_page.dart';
+import 'pages/login_page.dart';
 
-void main() {
-  runApp(MyApp()); // Memperbaiki pemanggilan MyApp() di dalam runApp
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,11 +23,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'intropage', // Menetapkan rute awal
+      initialRoute: 'loginpage', // Menetapkan rute awal
       routes: {
         'intropage': (context) => IntroPage(),
         'menupage': (context) => MenuPage(),
         'rawatpage': (context) => RawatPage(),
+        'loginpage': (context) => LoginPage(),
       },
     );
   }
