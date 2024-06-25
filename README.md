@@ -300,8 +300,8 @@ class _MenuPageState extends State<MenuPage> {
   }
 }
 
-### page food detail
-
+### page menu
+Widget MenuPage adalah widget stateful yang mewakili layar menu utama aplikasi.
 
 ```dart
 import 'package:flutter/material.dart';
