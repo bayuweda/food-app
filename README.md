@@ -23,6 +23,8 @@ merupakan sebuah aplikasi flutter dengan judul Sushi man yang merupakan aplikasi
 - button.dart: Komponen tombol kustom yang digunakan di bagian promo.
 - food_details.dart: Halaman untuk menampilkan informasi detail tentang item makanan.
 
+
+
 ### page menu
 Widget MenuPage adalah widget stateful yang mewakili layar menu utama aplikasi.
 
@@ -300,8 +302,9 @@ class _MenuPageState extends State<MenuPage> {
   }
 }
 
-### page menu
-Widget MenuPage adalah widget stateful yang mewakili layar menu utama aplikasi.
+
+### page food detail
+
 
 ```dart
 import 'package:flutter/material.dart';
@@ -500,4 +503,6 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
+
+
 
