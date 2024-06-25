@@ -1,16 +1,36 @@
-# food_app
+# Food App README
 
-A new Flutter project.
+## Pendahuluan
+README ini memberikan gambaran umum tentang kode sumber untuk MenuPage di aplikasi Food App yang dibangun dengan Flutter. Aplikasi ini mengambil data menu makanan dari API, menampilkannya dalam daftar, dan memungkinkan pengguna untuk menavigasi ke tampilan detail setiap item makanan.
 
-## Getting Started
+## Prasyarat
+- Flutter SDK
+- Dart
+- Paket http
+- Server API yang berjalan yang menyediakan data menu makanan
 
-This project is a starting point for a Flutter application.
+## Instalasi
+1. Pastikan Anda telah menginstal Flutter. Jika belum, ikuti petunjuk [di sini](https://flutter.dev/docs/get-started/install).
+2. Clone repositori ini ke mesin lokal Anda.
+3. Arahkan ke direktori proyek.
+4. Jalankan flutter pub get untuk menginstal dependensi yang diperlukan.
 
-A few resources to get you started if this is your first Flutter project:
+## Gambaran Umum Kode Sumber
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### File Utama
+- menu_page.dart: Berisi widget MenuPage utama dan manajemen state-nya.
+- button.dart: Komponen tombol kustom yang digunakan di bagian promo.
+- tile_food.dart: Komponen tile kustom untuk menampilkan item makanan.
+- food.dart: Kelas model yang mewakili item makanan.
+- food_details.dart: Halaman untuk menampilkan informasi detail tentang item makanan.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Widget MenuPage
+Widget MenuPage adalah widget stateful yang mewakili layar menu utama aplikasi.
+
+```dart
+class MenuPage extends StatefulWidget {
+  const MenuPage({super.key});
+
+  @override
+  State<MenuPage> createState() => _MenuPageState();
+}
