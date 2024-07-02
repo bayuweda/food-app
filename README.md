@@ -6,6 +6,20 @@ merupakan sebuah aplikasi flutter dengan judul Sushi man yang merupakan aplikasi
 - Dart
 - Paket http
 - Server API yang berjalan yang menyediakan data menu makanan
+  
+## Desain Figma
+- Login page
+- ![login page](https://github.com/bayuweda/food-app/assets/60813633/12dbb4a4-21db-4694-8c44-a20e049ef558)
+
+- Intro Page
+- ![intro page](https://github.com/bayuweda/food-app/assets/60813633/e68dae16-b921-4959-80c0-69e29bd7ccb7)
+
+- Menu page
+- ![menu page](https://github.com/bayuweda/food-app/assets/60813633/764e8dce-9daa-4bf9-b731-038130a206bb)
+
+- Food detail page
+- ![food detail](https://github.com/bayuweda/food-app/assets/60813633/eff0d092-ba51-46b2-92ed-ddd910957fa9)
+
 
 ## Instalasi
 1. Pastikan Anda telah menginstal Flutter. Jika belum, ikuti petunjuk [di sini](https://flutter.dev/docs/get-started/install).
